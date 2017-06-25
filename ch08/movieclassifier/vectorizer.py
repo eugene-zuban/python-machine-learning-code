@@ -4,7 +4,7 @@ import os
 import pickle
 
 cur_dir = os.path.dirname(__file__)
-stop = pickle.load(open(os.path.join(cur_dir, 'pkl_objects', 'stopwors.pkl'), 'rb'))
+stop = pickle.load(open(os.path.join(cur_dir, 'pkl_objects', 'stopwords.pkl'), 'rb'))
 
 def tokenizer(text):
     text = re.sub('<[^>]*>', '', text)
