@@ -26,7 +26,7 @@ def train(document, y):
     X = vect.transform([document])
     clf.partial_fit(X, [y])
 
-def sql_entry(path, document, y):
+def sqlite_entry(path, document, y):
     conn = sqlite3.connect(path)
     c = conn.cursor
     c.execute("INSERT INTO review_db (review, sentiment, date) VALUES (?, ?, DATETIME(now))", (document, now))
