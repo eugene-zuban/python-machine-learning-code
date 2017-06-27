@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from wtforms import Form, textAreaField, validators
+from wtforms import Form, TextAreaField, validators
 import pickle
 import sqlite3
 import os
@@ -36,8 +36,8 @@ def sql_entry(path, document, y):
 
 #### org part
 app = Flask(__name__)
-class = ReviewForm(Form):
-    moviereview = TextAreaField('', [validators.DataRequared(), validators.length(min=15)])
+class ReviewForm(Form):
+    moviereview = TextAreaField('', [validators.DataRequired(), validators.length(min=15)])
 
 @app.route('/')
 def index():
